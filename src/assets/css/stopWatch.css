@@ -1,0 +1,147 @@
+.stopwatch-container {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #e3f2fd, #fff);
+  border-radius: 20px;
+  max-width: 500px;
+  margin: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-weight: 700;
+  font-size: 2rem;
+  color: rgb(223, 52, 52);
+}
+
+.circle-timer {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring .bg {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 12;
+}
+
+.progress-ring .progress {
+  fill: none;
+  stroke: #00bcd4;
+  stroke-width: 12;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.5s ease;
+}
+
+.circle-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.btn-group .btn {
+  margin: 0 15px 0 0;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+.btn-group .btn:hover {
+  transform: scale(1.05);
+}
+
+.laps {
+  text-align: left;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 20px;
+}
+
+.laps h5 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.stopwatch-container.dark {
+  background: linear-gradient(135deg, #121212, #1e1e1e);
+  color: #eee;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+}
+
+.stopwatch-container.dark .circle-timer .progress-ring .bg {
+  stroke: #333;
+}
+
+.stopwatch-container.dark .circle-timer .progress-ring .progress {
+  stroke: #00bcd4;
+}
+
+.stopwatch-container.dark .circle-label {
+  color: #00bcd4;
+}
+
+.dark-toggle-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  user-select: none;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: #00bcd4;
+}
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+.btn-primary {
+  background-color: #00bcd4;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #0097a7;
+}

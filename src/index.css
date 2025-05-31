@@ -1,0 +1,10 @@
+.tab-glow {
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.6);
+  transition: box-shadow 0.3s ease;
+}
+
+.emoji-btn:hover {
+  transform: scale(1.2);
+  background-color: #d1e7dd;
+  transition: 0.3s ease-in-out;
+}
