@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import '../assets/css/stopwatch.css';
 
+
 const Stopwatch = () => {
   const [time, setTime] = useState(0);
   const [isActive, setIsActive] = useState(false);
