@@ -38,7 +38,6 @@ function App() {
           </ul>
         </nav>
 
-        {/* Main Content */}
         <div className="main-content p-4 animate__animated animate__fadeIn">
           <Routes>
             <Route path="/" element={<Home />} />
